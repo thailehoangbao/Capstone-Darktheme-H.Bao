@@ -131,13 +131,6 @@ header .container nav button {
 }
 
 
-.header__right>i {
-    font-size: 1.4rem;
-    padding: 0 4px;
-    color: var(--white);
-    transform: rotate(-20deg);
-}
-
 .fa-bars {
     font-size: 1.4rem;
     color: var(--white);
@@ -151,6 +144,26 @@ header .container nav button {
     color: #fb811e;
 }
 
+.header__icon {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 38px;
+}
+
+.header__icon .fa-sun{
+    font-size: 1.4rem;
+    padding: 0 4px;
+    color: var(--white);
+    transform: rotate(-20deg);
+    transition: all 0.5s;
+}
+
+.header__icon .fa-sun:hover {
+    color: #fb811e;
+    cursor: pointer;
+}
+
 
 
 /* BANNER  */
@@ -161,7 +174,6 @@ header .container nav button {
 .banner__container {
     width: 100%;
     height: 100%;
-    position: relative;
 }
 
 .carousel-inner {
@@ -183,7 +195,7 @@ header .container nav button {
 }
 
 .title {
-    position: absolute;
+    position: relative;
     top: 50%;
     left: 50%;
     width: 500px;
@@ -197,6 +209,10 @@ header .container nav button {
     margin: 0;
 }
 
+.title h1:first-child {
+    padding-top: 3rem;
+}
+
 .title p {
     font-size: 1.2rem;
     color: #888;
@@ -206,7 +222,6 @@ header .container nav button {
     padding-right: 48px;
     font-family: 'Source Sans Pro', sans-serif;
 }
-
 
 
 .btn {
@@ -267,11 +282,11 @@ header .container nav button {
     height: 100%;
 }
 
-.banner__left h2 {
+.banner__left .title h2 {
     position: absolute;
     font-size: 8rem;
-    top: 13%;
-    left: 25%;
+    top: -20%;
+    left: -10%;
     font-weight: 700;
     color: rgba(0, 0, 0, 0.07);
 }
@@ -312,15 +327,6 @@ header .container nav button {
         padding: 0 12px;
     }
 
-    .banner__left h2 {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        z-index: 10;
-        transform: translate(-100%, -100%);
-        font-size: 14vw;
-    }
-
     .banner__left .title {
         width: 90%;
         background-color: var(--white);
@@ -345,6 +351,53 @@ header .container nav button {
         width: 140px;
         font-size: 0.9rem;
         font-weight: 400;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .banner__left .title {
+        position: relative;
+    }
+
+    .banner__left .title {
+        width: 80vw;
+        border-radius: 4px;
+        margin: 0;
+    }
+
+    .banner__left .title {
+        background-color: var(--background-darktheme);
+    }
+
+    .banner__left .title p {
+        font-size: 1.1rem;
+    }
+
+    .banner__left .title h1 {
+        font-size: 1.5rem;
+    }
+
+    .banner__left .title h1:first-child {
+        margin-top: 2rem;
+    }
+
+    .banner__left .title h2 {
+        top:0%;
+        left: 5%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .banner__left .title h2 {
+        top: 10%;
+        font-size: 5rem;
+    }
+    .banner__left .title p {
+        font-size: 0.85rem;
+        padding-right: 0px;
+    }
+    .banner__left .title h1 {
+        font-size: 1.3rem;
     }
 }
 
